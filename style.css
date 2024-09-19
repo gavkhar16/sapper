@@ -1,0 +1,128 @@
+:root{
+--purple: #2f40d3;
+--light-purple: #242947;
+--lighter-purple: #797e9a;
+--green: #66a663;
+--white: #fff;
+--orange: #dbac36;
+
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+  color: white;
+  background-color: var(--purple);
+  padding: 20px;
+}
+header{
+    display: flex;
+    background-color:var(--light-purple) ;
+    border-radius: 20px;
+    padding: 20px;
+    align-items: center;
+    grid-area: 5px;
+}
+header img{
+height: 80px;
+}
+h1{
+text-transform: uppercase;
+}
+
+.exit{
+color: blue;
+text-decoration: underline;
+cursor: pointer;
+}
+.exit:hover{
+color: var(--white);
+}
+main{
+    margin-top: 20px;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap-reverse;
+}
+.gridBlocks{
+background-color: var(--light-purple);
+padding: 20px;
+border-radius: 20px;
+flex-grow: 1000;
+}
+.area{
+display: grid;
+grid-template-columns: repeat(10, 28px);
+gap: 5px;
+justify-content: center;
+
+}
+.cell{
+height: 28px;
+width: 28px;
+background-color: var(--purple);
+border-radius: 3px;
+text-align: center;
+font-weight: bold;
+line-height: 28px;
+font-size: 22px;
+}
+.pointsBlock{
+background-color: var(--light-purple);
+padding: 20px;
+border-radius: 20px;
+width: 250px;
+flex-grow: 1;
+}
+h2{
+text-align: center;
+font-style: 20px;
+margin-bottom: 10px;
+}
+.inputBlock{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+label{
+    background-color: var(--purple);
+    padding: 5px;
+    border-radius: 30px;
+    min-width: 100px;
+    text-align: center;
+    flex-grow: 1;
+}
+label input{
+    display: none;
+}
+label:has(input:checked) {
+    background-color: var(--orange);
+}
+.btn{
+    background-color: var(--green);
+    height: 60px;
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    border-radius: 30px;
+    cursor: pointer;
+}
+.cell.active{
+background-color: var(--lighter-purple);
+cursor: pointer;
+}
+.cell.flag{
+background-image: url(./img/flag-in-hole_26f3.png);
+background-color: var(--green);
+background-size: contain;
+}
+.cell.bomb{
+    background-image: url(./img/bomb.png);
+    background-color: var(--orange);
+    background-size: contain; 
+}
